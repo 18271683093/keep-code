@@ -77,7 +77,7 @@
 /******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
 /******/
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "";
+/******/ 	__webpack_require__.p = "/web";
 /******/
 /******/
 /******/ 	// Load entry module and return exports
@@ -127,7 +127,7 @@ eval("/* WEBPACK VAR INJECTION */(function(global) {var scope = (typeof global !
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n//\n//\n//\n//\n//\n//\n\r\n/* harmony default export */ __webpack_exports__[\"default\"] = ({\r\n  methods: {\r\n    sayGoodBey () {\r\n      alert('bey')\r\n    }\r\n  }\r\n});\r\n\n\n//# sourceURL=webpack:///./src/components/App.vue?./node_modules/_vue-loader@15.9.3@vue-loader/lib??vue-loader-options");
+eval("__webpack_require__.r(__webpack_exports__);\n//\n//\n//\n//\n//\n//\n\r\n/* harmony default export */ __webpack_exports__[\"default\"] = ({\r\n  data () {\r\n    return {\r\n      haha: 'bey'\r\n    }\r\n  },\r\n  methods: {\r\n    sayGoodBey () {\r\n      alert('bey')\r\n    }\r\n  }\r\n});\r\n\n\n//# sourceURL=webpack:///./src/components/App.vue?./node_modules/_vue-loader@15.9.3@vue-loader/lib??vue-loader-options");
 
 /***/ }),
 
@@ -139,7 +139,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n//\n//\n//\n//\n//\n//\n\r\n/
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"render\", function() { return render; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"staticRenderFns\", function() { return staticRenderFns; });\nvar render = function() {\n  var _vm = this\n  var _h = _vm.$createElement\n  var _c = _vm._self._c || _h\n  return _c(\"div\", { attrs: { id: \"app\" } }, [\n    _c(\"div\", [_vm._v(\"hello word!\")]),\n    _vm._v(\" \"),\n    _c(\"button\", { on: { click: _vm.sayGoodBey } })\n  ])\n}\nvar staticRenderFns = []\nrender._withStripped = true\n\n\n\n//# sourceURL=webpack:///./src/components/App.vue?./node_modules/_vue-loader@15.9.3@vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/_vue-loader@15.9.3@vue-loader/lib??vue-loader-options");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"render\", function() { return render; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"staticRenderFns\", function() { return staticRenderFns; });\nvar render = function() {\n  var _vm = this\n  var _h = _vm.$createElement\n  var _c = _vm._self._c || _h\n  return _c(\"div\", { attrs: { id: \"app\" } }, [\n    _c(\"div\", [_vm._v(\"hello word!\")]),\n    _vm._v(\" \"),\n    _c(\"button\", { on: { click: _vm.sayGoodBey } }, [_vm._v(_vm._s(_vm.haha))])\n  ])\n}\nvar staticRenderFns = []\nrender._withStripped = true\n\n\n\n//# sourceURL=webpack:///./src/components/App.vue?./node_modules/_vue-loader@15.9.3@vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/_vue-loader@15.9.3@vue-loader/lib??vue-loader-options");
 
 /***/ }),
 
@@ -258,7 +258,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _app
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"createRouter\", function() { return createRouter; });\n/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ \"./node_modules/_vue@2.6.11@vue/dist/vue.runtime.esm.js\");\n/* harmony import */ var vue_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vue-router */ \"./node_modules/_vue-router@3.4.3@vue-router/dist/vue-router.esm.js\");\n\r\n\r\n\r\nvue__WEBPACK_IMPORTED_MODULE_0__[\"default\"].use(vue_router__WEBPACK_IMPORTED_MODULE_1__[\"default\"])\r\n\r\n\r\nfunction createRouter(){\r\n    const router = new vue_router__WEBPACK_IMPORTED_MODULE_1__[\"default\"]({\r\n        mode:\"history\",\r\n        routes:[]\r\n    })\r\n}\n\n//# sourceURL=webpack:///./src/router.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"createRouter\", function() { return createRouter; });\n/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ \"./node_modules/_vue@2.6.11@vue/dist/vue.runtime.esm.js\");\n/* harmony import */ var vue_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vue-router */ \"./node_modules/_vue-router@3.4.3@vue-router/dist/vue-router.esm.js\");\n\r\n\r\n\r\nvue__WEBPACK_IMPORTED_MODULE_0__[\"default\"].use(vue_router__WEBPACK_IMPORTED_MODULE_1__[\"default\"])\r\n\r\n\r\nfunction createRouter () {\r\n    return new vue_router__WEBPACK_IMPORTED_MODULE_1__[\"default\"]({\r\n        mode: \"history\",\r\n        routes: []\r\n    })\r\n\r\n}\n\n//# sourceURL=webpack:///./src/router.js?");
 
 /***/ })
 

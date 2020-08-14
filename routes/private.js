@@ -8,7 +8,6 @@ const jwtMiddleware = require('../middlewares/jwt')
 const router = new Router()
 router.prefix('/api')
 router.use(jwtMiddleware)
- 
 router.get('/test', (ctx, next) => {
   
     ctx.result = {

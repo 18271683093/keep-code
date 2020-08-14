@@ -8,6 +8,9 @@ module.exports = merge(baseConfig, {
     plugins: [
         new VueSSRClientPlugin()
     ],
+    output:{
+        publicPath: '/web',
+    }
     // optimization: {
     //     runtimeChunk: {
     //         name: 'manifest'

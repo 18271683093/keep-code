@@ -18,7 +18,8 @@ app.use(errorHandler)
 // Global Middlewares
 app.use(bodyParser)
 // app.use(static({dir:config.publicDir , router:'/src'}))
-app.use(static({dir:'./src' , router:'/src'}))
+
+app.use(static({ dir:'./src/dist' , router:'/web'}))
 
 // backend Routes
 app.use(publicRouter.routes(),publicRouter.allowedMethods())

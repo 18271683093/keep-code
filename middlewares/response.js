@@ -7,9 +7,9 @@ const responseHandler = ctx =>{
     if(ctx.result != undefined ){
         ctx.type = 'json';
         ctx.body = {
-            code:200,
-            msg:ctx.msg || '',
-            data:ctx.result
+            code:ctx.result.code || 200,
+            msg:ctx.result.msg || '',
+            data:ctx.result.data
         }
     }
 }
