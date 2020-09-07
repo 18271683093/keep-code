@@ -6,7 +6,7 @@ module.exports = {
     port: '10100',
     secret: 'secret',
     publicDir: path.resolve(__dirname, './src/dist'),
-    logPath: path.resolve(__dirname, './logs/koa-template.log'),
+    logPath: path.resolve(__dirname, '../logs/koa-template.log'),
     mongoDB: {
         database: 'mall',
         username: 'root',
