@@ -1,25 +1,31 @@
 const Router = require('koa-router')
 const Vue = require('vue')
 const path = require('path')
-const { createRenderer, createBundleRenderer } = require('vue-server-renderer')
+const { createRenderer , createBundleRenderer } = require('vue-server-renderer')
+const config = require('../config')
 const template = require('fs').readFileSync(path.resolve(__dirname, '../src/index.template.html'), 'utf-8');
+const router = new Router();
 const serverBundle = require('../src/dist/vue-ssr-server-bundle.json')
 const clientManifest = require('../src/dist/vue-ssr-client-manifest.json')
 
-const isDev = false;
-// if (isDev) {
-//     const renderer = createRenderer({
-//         template: template
-//     });
-// } else {
-    const renderer = createBundleRenderer(serverBundle, {
+
+let renderer = null;
+if (config.isDev) {
+
+    renderer = createRenderer({
+        template: template
+    });
+} else {
+  
+    renderer = createBundleRenderer(serverBundle, {
+        runInNewContext: false, // 推荐
         template: template,
         clientManifest
     });
-// }
+}
 
 
-const router = new Router();
+
 router.get('/', async (ctx, next) => {
 
     const context = {
@@ -30,19 +36,19 @@ router.get('/', async (ctx, next) => {
       `,
         url: ctx.req.url
     };
-    
+
     renderer.renderToString(context, (err, html) => {
         if (err) {
             console.log(err)
             if (err.code === 404) {
                 ctx.result = {
-                    msg:'Page not found',
-                    code:404
+                    msg: 'Page not found',
+                    code: 404
                 }
             } else {
                 ctx.result = {
-                    msg:'Internal Server Error',
-                    code:500
+                    msg: 'Internal Server Error',
+                    code: 500
                 }
             }
         } else {
